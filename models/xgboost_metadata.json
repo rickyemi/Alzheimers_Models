@@ -1,0 +1,11 @@
+{
+  "model_name": "xgboost",
+  "training_date": "2026-09-12T21:05:21.770159",
+  "parameters": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "n_estimators": 200,
+    "subsample": 1.0
+  },
+  "model_type": "XGBClassifier"
+}

@@ -1,0 +1,74 @@
+# Configuration for Alzheimer's Disease Classification Model
+
+# Paths
+data:
+  raw_data_path: "data/raw/alzheimers_biomarkers.csv"
+  processed_data_path: "data/processed/alzheimers_processed.csv"
+  features_engineered_path: "data/processed/alzheimers_engineered.csv"
+
+models:
+  save_directory: "models"
+
+results:
+  metrics_directory: "results/metrics"
+  predictions_directory: "results/predictions"
+  plots_directory: "results/plots"
+
+# Data processing
+preprocessing:
+  handle_missing_values: true
+  detect_outliers: true
+  outlier_iqr_threshold: 1.5
+  normalize_features: true
+  random_state: 42
+
+# Feature engineering
+features:
+  create_tau_ratio: true
+  create_biomarker_composite: true
+  create_cognitive_age_interaction: true
+  create_education_adjusted_cognition: true
+  create_tau_amyloid_index: true
+
+# Train-test split
+train_test_split:
+  test_size: 0.2
+  random_state: 42
+  stratify: true
+
+# Model training
+training:
+  hyperparameter_tuning: false  # Set to true for extensive tuning
+  random_state: 42
+  cv_folds: 5
+
+  # SVM RBF parameters
+  svm_rbf:
+    C: 10
+    gamma: scale
+    kernel: rbf
+
+  # XGBoost parameters
+  xgboost:
+    max_depth: 5
+    learning_rate: 0.1
+    n_estimators: 200
+    subsample: 1.0
+    eval_metric: logloss
+
+  # Logistic Regression parameters
+  logistic_regression:
+    C: 1.0
+    solver: lbfgs
+    max_iter: 500
+
+# Evaluation
+evaluation:
+  metrics_to_compute:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc
+  save_plots: true
+  plot_formats: ['png', 'pdf']

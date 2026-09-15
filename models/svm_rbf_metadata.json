@@ -1,0 +1,10 @@
+{
+  "model_name": "svm_rbf",
+  "training_date": "2026-09-12T21:05:21.167554",
+  "parameters": {
+    "C": 10,
+    "gamma": "scale",
+    "kernel": "rbf"
+  },
+  "model_type": "SVC"
+}
