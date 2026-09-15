@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A fully functional, production-ready machine learning project for binary classification of Alzheimer's disease patients as Amyloid Positive or Negative. The project demonstrates best practices for organizing data science repositories using three complementary classifiers: RBF SVM, XGBoost, and Logistic Regression.
+A fully functional, production-ready machine learning project for binary classification of Alzheimer's disease patients as Amyloid Positive or Negative using three complementary classifiers: RBF SVM, XGBoost, and Logistic Regression.
 
 ## What Was Created
 
